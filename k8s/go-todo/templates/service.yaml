@@ -17,18 +17,15 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Values.container.name }}-ingress
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: {{ .Values.container.static_ip_name }}
-    networking.gke.io/managed-certificates: {{ .Values.container.name }}-certificate
 spec:
   backend:
     serviceName: {{ .Values.container.name }}-service
     servicePort: {{ .Values.container.port }}
----
-apiVersion: networking.gke.io/v1beta1
-kind: ManagedCertificate
-metadata:
-  name: {{ .Values.container.name }}-certificate
-spec:
-  domains:
-    - {{ .Values.container.domain }}
+# ---
+# apiVersion: networking.gke.io/v1beta1
+# kind: ManagedCertificate
+# metadata:
+#   name: {{ .Values.container.name }}-certificate
+# spec:
+#   domains:
+#     - {{ .Values.container.domain }}
