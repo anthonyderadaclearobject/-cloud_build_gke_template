@@ -23,7 +23,7 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Print("Healthy")
+	log.Print("Health check")
 	w.WriteHeader(http.StatusOK)
 	target := os.Getenv("TARGET")
 	if target == "" {
