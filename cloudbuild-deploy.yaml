@@ -26,6 +26,7 @@ steps:
     name: 'gcr.io/${PROJECT_ID}/helm'
     env:
       - KUBECONFIG=/workspace/.kube/config
+      - 'TILLERLESS=true'
     args:
       - upgrade
       - --install
