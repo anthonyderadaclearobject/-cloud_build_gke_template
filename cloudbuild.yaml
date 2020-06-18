@@ -1,0 +1,32 @@
+steps:
+
+  # build only the first stage, so we can run tests with it
+  - id: build-test-image
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker image build --target build --tag go-todo:test .
+
+  # use initial image to run tests
+  - id: run-tests
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker container run go-todo:test go test
+
+  # build app image after tests pass
+  - id: build-app
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker image build --tag gcr.io/${PROJECT_ID}/go-todo:${COMMIT_SHA} .
+
+# listing images to push to gcr
+images:
+  - gcr.io/${PROJECT_ID}/go-todo:${COMMIT_SHA}

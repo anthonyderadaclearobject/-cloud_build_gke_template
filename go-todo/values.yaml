@@ -1,0 +1,9 @@
+environment: development
+container:
+  name: go-todo
+  port: 8080
+  image: gcr.io/go-todo-list/go-todo
+  tag: hola
+  static_ip_name: go-todo-ip
+  domain: togoist.app
+replicas: 1

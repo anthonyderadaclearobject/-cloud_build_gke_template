@@ -1,0 +1,5 @@
+github.com/atyderada/go-todo-postgres v0.0.0-20200503021601-c54564b6fad2 h1:bMTm31GbHADlGkqmnzYXqFQf+9Qv/MJHRS/6uoNtZKk=
+github.com/atyderada/go-todo-postgres v0.0.0-20200503021601-c54564b6fad2/go.mod h1:/j8hnqeB8KVJ51oiZQZ/MKmCZJYephfvSavaNk8aNBE=
+github.com/cloudnativedevops/demo v0.0.0-20200405225631-027767a7edf6 h1:0oeu5zMnNVXQPeED3vRkjY9jZY99jg7W5YqdKWdPGQY=
+github.com/cloudnativedevops/demo/hello-cloudbuild v0.0.0-20200405225631-027767a7edf6 h1:MvnlsAkLJjYpHjtYyQsaPljGPE2UDdsJI46m60BE/og=
+github.com/cloudnativedevops/demo/hello-cloudbuild v0.0.0-20200405225631-027767a7edf6/go.mod h1:WyJdumT1XdPD6zBfWTeE4DkOGqSsaV+0ldBgduqInuY=
