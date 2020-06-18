@@ -29,7 +29,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if target == "" {
 		target = "Togoist"
 	}
-	fmt.Fprintf(w, "Welcome to the to-do list manager %s!\n Usage: \n /get -> Get a sample todo list item \n", target)
+	fmt.Fprintf(w, "Welcome to the to-do list manager %s!", target)
 }
 
 func getTodo(w http.ResponseWriter, r *http.Request) {
