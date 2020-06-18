@@ -31,7 +31,7 @@ steps:
       - upgrade
       - --install
       - ${TAG_NAME}-go-todo
-      - --namespace=${TAG_NAME}-go-todo
+      - --namespace=default
       - --values
       - k8s/go-todo/${TAG_NAME}-values.yaml
       - --set
